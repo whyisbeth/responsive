@@ -1,0 +1,111 @@
+/* 
+** Mobile First Styles 
+*/
+html,body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.header,
+.footer {
+    width: 100%;
+    background: #1c8dd2;
+    color: #eee;
+    position: fixed;
+    padding: 0 20px;
+}
+
+.header {
+    top: 0;
+    height: 80px;
+    overflow: auto;
+}
+
+.footer {
+    bottom: 0;
+    height: 60px;
+}
+
+.content {
+    overflow: auto;
+    position: absolute;
+    top: 80px;
+    bottom: 60px;
+    padding: 20px;
+}
+
+.section {
+    width: 100%;
+    height: 40%;
+    min-height: 220px;
+    margin: 2% 0;
+    background: #a8d7f4;
+}
+
+img {
+    width: 100%;
+}
+
+ol {
+    list-style-position: inside;
+    padding:0;
+    margin:0;
+}
+li {
+    background: #eee;
+}
+li:nth-child(even) {
+    background: #ccc;    
+}
+
+.rounded {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    background: #eee;
+    height: 200px;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.centered-content:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.center {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 20px);
+}
+
+/* 
+** INTERMEDIATE-Screen Specific Styles 
+*/
+@media only screen and (min-width: 768px) {
+    .section {
+        width: 48%;
+        height: 60%;
+        margin: 2% 1%;
+        float: left;
+    }
+}
+
+/* 
+** WIDE-Screen Specific Styles 
+*/
+@media only screen and (min-width: 1200px) {
+    .section {
+        height: 100%;
+        width:23%;
+    }
+}
+
